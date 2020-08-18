@@ -15,11 +15,12 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Patient John = new Patient();
         Address address = new Address();
-        
         address.setAddress(1, "Fake Street", "London", "CM1 3GU");
+        John.setPatientDetails("P1234", "John", "Smith", address, 20, "Male");
         
-        System.out.println(address.getAddress());
+        System.out.println(John.getAddress());
     }
     
 }

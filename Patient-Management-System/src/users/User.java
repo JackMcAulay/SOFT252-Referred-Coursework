@@ -11,31 +11,24 @@ package users;
  */
 public class User {
     
-    private String id;
-    private String firstName;
-    private String surname;
+    protected String id;
+    protected String firstName;
+    protected String surname;
+    protected Address address;
 
     public String getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getSurname() {
         return surname;
     }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    } 
+    
+    public String getAddress() {
+        return address.getAddress();
+    }
 }
