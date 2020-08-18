@@ -31,4 +31,8 @@ public class User {
     public String getAddress() {
         return address.getAddress();
     }
+    
+    public String getAllDetails(){
+        return(firstName + " " + surname + "" + "\n" + getAddress());
+    }
 }

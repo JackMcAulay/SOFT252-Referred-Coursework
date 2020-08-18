@@ -22,6 +22,10 @@ public class Patient extends User {
         age = patientAge;
         gender = patientGender;
     }
+    
+    public String getAllDetails(){
+        return(firstName + " " + surname + "" + "\n" + getAddress() + "\nAge: " + age + "\nGender: " + gender);
+    }
 
     public int getAge() {
         return age;
