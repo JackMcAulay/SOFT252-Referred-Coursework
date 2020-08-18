@@ -19,6 +19,8 @@ public class Main {
         Doctor DrBob = new Doctor();
         Address address1 = new Address();
         Address address2 = new Address();
+        Appointment appointment = new Appointment();
+        Prescription prescription = new Prescription();
         
         address1.setAddress(1, "Fake Street", "London", "EL1 3ZU");
         John.setPatientDetails("P1234", "John", "Smith", address1, 20, "Male");
@@ -26,8 +28,14 @@ public class Main {
         address2.setAddress(3, "Real Street", "London", "WL1 13P");
         DrBob.setDoctorDetails("D3245", "Bob", "Doe", address2);
        
-        System.out.println(John.getAllDetails());
-        System.out.println(DrBob.getAllDetails());
+        appointment.createAppointment(John, DrBob, 1);
+        
+        appointment.addNotes("Mr. John Doe has been suffering from fever for the last two weeks. He is coughing and the phlegm is green in colour. ");
+        
+        prescription.createPrescription(John, "Amoxicillin ", 24, 4);
+        appointment.addPrescription(prescription);
+        
+        appointment.appointmentSummary();
     }
     
 }
