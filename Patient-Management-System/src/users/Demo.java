@@ -9,7 +9,7 @@ package users;
  *
  * @author jack
  */
-public class Main {
+public class Demo {
 
     /**
      * @param args the command line arguments
@@ -22,10 +22,10 @@ public class Main {
         Appointment appointment = new Appointment();
         Prescription prescription = new Prescription();
         
-        address1.setAddress(1, "Fake Street", "London", "EL1 3ZU");
-        John.setPatientDetails("P1234", "John", "Smith", address1, 20, "Male");
+        address1.setAddress(55, "Portland Square Building, Drake Circus", "Plymouth", "PL4 8AA");
+        John.setPatientDetails("P1234", "John", "Doe", address1, 45, "Male");
         
-        address2.setAddress(3, "Real Street", "London", "WL1 13P");
+        address2.setAddress(24, "Fictitious Clinic, Diagon Alley", "Plymouth", "PL4 8AA");
         DrBob.setDoctorDetails("D3245", "Bob", "Doe", address2);
        
         appointment.createAppointment(John, DrBob, 1);
